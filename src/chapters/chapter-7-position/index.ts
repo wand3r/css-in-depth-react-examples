@@ -1,0 +1,1 @@
+export { PageWithModel as Default } from "./page-with-modal"
