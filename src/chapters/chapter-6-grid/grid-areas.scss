@@ -1,0 +1,16 @@
+.grid-areas {
+    display: grid;
+    height: 50em;
+    grid-template-areas: "left-top     top       right-top"
+                         "left         center    right "
+                         "left-bottom  bottom    right-bottom";
+    grid-auto-rows: 10em;
+    grid-auto-columns: 10em;
+    // justify-items: center;
+    // align-items: end;
+    align-content: space-between;
+}
+
+.grid-areas > div {
+    background: rgb(89, 197, 80)
+}

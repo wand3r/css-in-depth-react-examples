@@ -1,0 +1,66 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #709b90;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "title title"
+                       "nav   nav"
+                       "main  aside1"
+                       "main  aside2";
+  grid-template-columns: [left-start] 2fr 
+                         [left-end right-start] 1fr 
+                         [right-end];
+  grid-template-rows: repeat(4, [row] auto);
+  grid-gap: 1.5em;
+}
+
+.tile {
+  padding: 1.5em;
+  background-color: #fff;
+}
+
+.page-heading {
+  margin: 0;
+}
+
+header,
+nav {
+  grid-column: left-start / right-end;
+  grid-row: span 1;
+}
+
+.main {
+  grid-column: left;
+  grid-row: row 3 / 5;
+}
+
+.sidebar-top {
+  grid-area: aside1;
+}
+
+.sidebar-bottom {
+  grid-column: right;
+  grid-row: 4 / 5;
+}
+
+.tile > :first-child {
+  margin-top: 0;
+}
+
+.tile * + * {
+  margin-top: 1.5em;
+}
