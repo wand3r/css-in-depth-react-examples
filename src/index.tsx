@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import { AppContainer } from "react-hot-loader"
-import { App } from "./app"
+import { Default as App } from "./chapters/chapter-7-position"
 
 const render = (Component: React.ComponentType) => {
   ReactDOM.render(
@@ -15,7 +15,7 @@ const render = (Component: React.ComponentType) => {
 render(App)
 
 if (module.hot) {
-  module.hot.accept("./app", () => {
+  module.hot.accept(() => {
     render(App)
   })
 }

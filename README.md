@@ -1,8 +1,1 @@
-Boilerplate project with:
-
-* react
-* typescript
-* jest
-* storybook
-* webpack with HMR
-* scss
+Examples from [CSS in Depth](https://www.manning.com/books/css-in-depth) book in React.
