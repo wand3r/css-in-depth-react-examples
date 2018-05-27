@@ -1,1 +1,1 @@
-export { PageWithModel as Default } from "./page-with-modal"
+export { WombatCoffeePage as Default } from "./wombat-coffee-page"

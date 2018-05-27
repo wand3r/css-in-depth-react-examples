@@ -1,14 +1,14 @@
 import React, { Component } from "react"
-import { ModalDialog } from "./modal-dialog"
-import "./page-with-modal.scss"
+import { NewsletterSignUpModalDialog } from "./newsletters-signup-modal-dialog"
+import "./wombat-coffee-page.scss"
 
-type PageWithModelProps = {}
+type WombatCoffeePageProps = {}
 
-type PageWithModelState = { isNewsletterDialogOpen: boolean }
+type WombatCoffeePageState = { isNewsletterDialogOpen: boolean }
 
-export class PageWithModel extends Component<
-  PageWithModelProps,
-  PageWithModelState
+export class WombatCoffeePage extends Component<
+  WombatCoffeePageProps,
+  WombatCoffeePageState
 > {
   state = { isNewsletterDialogOpen: false }
 
@@ -29,7 +29,7 @@ export class PageWithModel extends Component<
                 Sign up
               </button>
             </p>
-            <ModalDialog
+            <NewsletterSignUpModalDialog
               isOpen={isNewsletterDialogOpen}
               onClose={() => this.toggleNewsletterDialog(false)}
             />
